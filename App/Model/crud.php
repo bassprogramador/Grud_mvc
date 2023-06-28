@@ -31,6 +31,18 @@
         return $resultado;
       }
       
+      public function getTotalRegostros()
+      {
+        $conect = $this->banco(); 
+        $sql = "SELECT id FROM pessoa";
+        $stmt = $conect->prepare($sql);
+        $stmt->execute();
+        $count =  $stmt->rowCount(); //conta o numeros de linhas
+        return $count;
+      }
+    
+
+      
     //Método para procurar por nome um registro em um recurso
       public function pesquisar($nome)
       {

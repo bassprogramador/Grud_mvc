@@ -10,7 +10,25 @@
       {
         $objetoCrud = new Crud();
         $lista = $objetoCrud->getLista();  // O método read tem o array
-        include "App/Views/home.php";     
+        
+        /****************************************************************************/
+          // verificar se está sendo passado na URL a página atual para ser atribuída 
+          // à variável pagina.
+             $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
+          // quantidade de registros por página
+             $quantidade_de_paginas = 4;
+          // calcular o inicio de cada página visualizada
+             $offset = ($pagina * $quantidade_de_paginas ) - $quantidade_de_paginas;
+             $paginar = array_slice($lista, $offset, $quantidade_de_paginas );
+          // contar o total de registros 
+          // $total_de_registros = count($lista);
+          // total de páginas 
+             $total_de_registros = $objetoCrud->getTotalRegostros();
+             $total_paginas = ceil($total_de_registros / $quantidade_de_paginas );
+             
+          /**************************************************************************/
+             
+             include "App/Views/home.php";     
       }
       
     //Método para chamar a view formulario para cadastrar
