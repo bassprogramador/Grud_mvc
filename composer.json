@@ -1,0 +1,25 @@
+{  
+    "name": "sergiopinho/router",
+    "description": "Pacote para projeto de rota",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Core\\": "Core/"
+            
+            
+        }
+    
+    },
+    
+    "authors": [
+        {
+            "name": "Sergio Pinho da Silva",
+            "email": "sergio@hotmail.com"
+        }
+    ],
+    "require": {
+        "php":"7.4.26"
+    }
+    
+}

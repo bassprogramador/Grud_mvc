@@ -1,0 +1,28 @@
+/*=== CABEÇAÇHO ===*/
+
+
+h1{
+ color: blue;
+}
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse; /* para não duplicar a borda8*/
+  padding: 5px 2px;
+}
+.corpoLista{
+    width: 80%;
+    margin: auto auto;
+  }
+table{
+  width: 100%;
+}
+th{
+  background-color:#264696;
+  color: white;
+}
+tr:hover{
+  background-color: #f7f5f5;
+}
+.link{
+  margin-left: 20px;
+}
